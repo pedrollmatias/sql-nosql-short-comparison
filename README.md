@@ -58,7 +58,7 @@ As collections foram modeladas de acordo com a figura abaixo:
 
 ## Realizando as Queries
 
-1. Selecionar o nome e sobrenome dos empregados que já tiveram cargo “Accountant”.
+**1. Selecionar o nome e sobrenome dos empregados que já tiveram cargo “Accountant”.**
 
 - Em SQL:
 ```SQL
@@ -79,7 +79,7 @@ Seguindo a mesma lógica da consulta 1, a parte ``` { 'historico.nm_cargo': 'Acc
 
 Percebe-se que, no MongoDB, todo o histórico de empregados já está contido no documento responsável por descrever o empregado. Portanto, não há necessidade de ```JOINS```.
 
-2. Selecionar o nome do departamento e a quantidade de empregados por departamento, apresentando o resultado em ordem crescente de nome de departamento.
+**2. Selecionar o nome do departamento e a quantidade de empregados por departamento, apresentando o resultado em ordem crescente de nome de departamento**
 
 - Em SQL:
 ```SQL
@@ -105,7 +105,7 @@ db.departamentos.aggregate(
 
 Na modelagem NoSQL, como os empregados estão inseridos dentro do documento de cada departmento (redundância), basta fazer uma projeção dos campos a serem exibidos e contar o tamanho do array ```empregados``` de cada documento de departamento. Diferentemente da abordagem relacional, não é necessáio consultar outras entidades para retornar a consulta.
 
-3. Selecionar o nome e sobrenome dos empregados que ocuparam um cargo com salario maior que 25000.
+**3. Selecionar o nome e sobrenome dos empregados que ocuparam um cargo com salario maior que 25000**.
 
 - Em SQL:
 ```SQL
@@ -125,7 +125,7 @@ db.empregados.find({ 'historico.salario': { $gt: 25000 } }, { nm_sobrenome: 1, n
 
 Seguindo a mesma lógica da consulta 1, percebe-se que, no MongoDB, todo o histórico de empregados já está contido no documento responsável por descrever o empregado. Portanto, não há necessidade de ```JOIN```, como no PostgreSQL
 
-4. Update
+**4. Update**
 
 - Em SQL:
 ```SQL
@@ -153,7 +153,7 @@ Apesar existir redundância de empregados nas collections ``` departamentos ``` 
 
 Se o atributo de atualização dosse ``` nm_sobrenome ``` do empregado, por exemplo, seriam necessários mais updates para atualizar o mesmo dados nas outras collections (já que este campo é persistido) para evitar inconsistência. Esta preocupação não existe para o SQL.
 
-5. Remoção
+**5. Remoção**
 
 - Em SQL:
 ```SQL
