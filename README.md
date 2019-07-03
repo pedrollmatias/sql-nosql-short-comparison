@@ -47,7 +47,9 @@ Para isso, após realizada a instalação e a devida inicialização do servidor
 Primeiramente, clone o respositório ou realize o download dos arquivos fonte disponibilizados. Navegue até o diretório em que se encontram os arquivos para dar continuidade.
 
 Através do terminal, digite o seguinte comando para inicializar o database:
-`mongo nome_do_database < scriptMongoTreinamento.js `
+```
+mongo nome_do_database < scriptMongoTreinamento.js
+```
 
 Esse comando irá inserir os dados do script no database (*nome_do_database*) escolhido. É importante ressaltar que não há necessidade de criação de database previamente. Apenas executar esse comando irá inicializar o database com os respectivos dados.
 
