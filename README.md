@@ -24,7 +24,7 @@ Para efetuar a instalação do MongoDB, existem tutoriais disponíveis na própr
   1. [Instalção em ambientes Linux/Unix](https://docs.mongodb.com/manual/administration/install-on-linux/)
   2. [Instalação no Windows](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
 
-## A base dados SQL
+## A base de dados SQL
 
 Utilizando o PostgresSQL, foi criado um banco dados qualquer. Através do script ```scriptBDTreinamento.sql```, foi inicializado o banco contendo 4 tabelas principais:
  - Empregados
